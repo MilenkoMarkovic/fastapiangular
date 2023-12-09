@@ -1,7 +1,7 @@
 FROM node:18
 
 # set up angular cli
-RUN yarn global add @angular/cli@15.10
+RUN yarn global add @angular/cli@15.2.10
 
 WORKDIR /app
 COPY package.json /app
