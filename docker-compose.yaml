@@ -16,8 +16,9 @@ services:
       - websocket
 
   angular:
+    build:
+      context:  ./frontend
     image: node:18.13.0-alpine
-    working_dir: /frontend
     ports:
       - target: 4200
         published: 4200
@@ -27,7 +28,6 @@ services:
         target: /frontend
     networks:
       - websocket
-    command: npm start
 
 networks:
   websocket:
